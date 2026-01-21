@@ -1,0 +1,32 @@
+# Configuración de Base de Datos SQL Server
+# Copia este archivo a config.yaml y completa con tus credenciales
+
+database:
+  # Configuración de conexión
+  server: "TU_SERVIDOR_SQL"
+  port: 1433
+  username: "TU_USUARIO"
+  password: "TU_CONTRASEÑA"
+  driver: "{ODBC Driver 17 for SQL Server}"
+  schema: "dbo"
+
+# Tablas del Sistema de Predicción de Flood
+flood_system:
+  # Base de datos y tabla de entrada: datos crudos de entrada
+  input_database: "otms_main"
+  input_table: "ypf_alarms"
+  # Base de datos y tabla de salida: predicciones de flood
+  output_database: "otms_analytics"
+  output_table: "ypf_flood_alarms"
+
+# Tablas del Sistema de Detección de Anomalías
+anomaly_system:
+  # Base de datos y tabla de entrada: datos de proceso
+  input_database: "otms_main"
+  input_table: "datos_proceso"
+  # Base de datos y tabla de salida: anomalías detectadas
+  output_database: "otms_analytics"
+  output_table: "anomalies_detector"
+
+
+
