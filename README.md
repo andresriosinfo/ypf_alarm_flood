@@ -2,16 +2,16 @@
 
 Sistema completo de detección de anomalías en series temporales usando Facebook Prophet, integrado con SQL Server para producción.
 
-## 📋 Características
+## Características
 
-- ✅ Detección de anomalías usando Facebook Prophet
-- ✅ Entrenamiento de modelos desde SQL Server
-- ✅ Procesamiento en tiempo real con worker continuo
-- ✅ Integración completa con SQL Server
-- ✅ Configuración centralizada mediante YAML
-- ✅ Listo para producción
+- Detección de anomalías usando Facebook Prophet
+- Entrenamiento de modelos desde SQL Server
+- Procesamiento en tiempo real con worker continuo
+- Integración completa con SQL Server
+- Configuración centralizada mediante YAML
+- Listo para producción
 
-## 🚀 Instalación
+## Instalación
 
 ### Requisitos
 
@@ -53,7 +53,7 @@ anomaly_system:
   output_table: "anomalies_detector"
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 github/
@@ -71,7 +71,7 @@ github/
 └── README.md                             # Este archivo
 ```
 
-## 🔄 Flujo del Sistema
+## Flujo del Sistema
 
 ```
 1. Datos de Entrada (CSV) 
@@ -85,7 +85,7 @@ github/
 5. worker_procesamiento.py (opcional) → Procesa continuamente nuevos datos
 ```
 
-## 📖 Uso
+## Uso
 
 ### Paso 1: Escribir Datos de Entrada
 
@@ -127,7 +127,7 @@ python worker_procesamiento.py
 python worker_procesamiento.py --interval 5
 ```
 
-## 🗄️ Estructura de Tablas SQL
+## Estructura de Tablas SQL
 
 ### Tabla de Entrada: `datos_proceso`
 
@@ -166,7 +166,7 @@ CREATE TABLE dbo.anomalies_detector (
 
 **Nota:** Las tablas se crean automáticamente al ejecutar los scripts.
 
-## 📊 Formato de Datos
+## Formato de Datos
 
 ### Entrada (CSV)
 
@@ -189,7 +189,7 @@ Los datos en SQL se almacenan en formato largo:
 - `variable_name`: Nombre de la variable
 - `value`: Valor numérico
 
-## 🔧 Configuración Avanzada
+## Configuración Avanzada
 
 ### Parámetros del Detector
 
@@ -207,7 +207,7 @@ detector = ProphetAnomalyDetector(
 )
 ```
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Error: "No se encuentra config.yaml"
 
@@ -228,7 +228,7 @@ pip install pyodbc
 
 **Solución:** Ejecuta primero `train_from_sql.py` para entrenar los modelos.
 
-## 📝 Notas Importantes
+## Notas Importantes
 
 1. **Seguridad:** Nunca subas `config.yaml` con credenciales reales a Git. Usa `.gitignore` (ya incluido).
 
@@ -238,17 +238,17 @@ pip install pyodbc
 
 4. **Datos:** Asegúrate de tener al menos 10 puntos de datos por variable para entrenar el modelo.
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de uso interno.
 
-## 👥 Contribución
+## Contribución
 
 Para contribuir, por favor:
 1. Crea una rama para tu feature
 2. Realiza tus cambios
 3. Envía un pull request
 
-## 📧 Contacto
+## Contacto
 
 Para preguntas o soporte, contacta al equipo de desarrollo.
